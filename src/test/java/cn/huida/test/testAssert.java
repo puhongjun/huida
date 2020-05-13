@@ -20,7 +20,7 @@ public class testAssert {
 		driver.get("http://hit.huidatech.cn/ui/login.html");
 		String huidaTitle=driver.getTitle();
 		driver.get("http://www.baidu.com/");
-		String baiduTitle=driver.getTitle();
+		String baiduTitle= driver.getTitle();
 		System.out.println("hudiatitle ["+huidaTitle+"] baiduTitle ["+baiduTitle+"]");
 //		Assert.assertEquals(huidaTitle,baiduTitle);
 		try{

@@ -90,6 +90,12 @@ public class testAssert {
 		}
 		
 	}
+	@Test
+	public void baidutest(){
+		driver.get("http://www.baidu.com/");
+		String Title=driver.getTitle();
+		Assert.assertEquals(Title, "百度一下你就知道");
+	}
 		
 	@AfterMethod
 	public void after(){

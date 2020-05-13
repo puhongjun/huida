@@ -60,6 +60,36 @@ public class testAssert {
 		}
 		
 	}
+	
+	@Test
+	public void test4(){
+		driver.get("http://www.baidu.com/");
+		String baiduTitle=driver.getTitle();
+		driver.get("http://www.baidu.com/");
+		String baiduTitle1=driver.getTitle();
+		System.out.println("baidutitle ["+baiduTitle+"] baiduTitle1 ["+baiduTitle1+"]");
+		try{
+			Assert.assertEquals(baiduTitle1,baiduTitle);
+		}catch(AssertionError error){
+			Assert.fail("百度Title1["+baiduTitle1+"]和百度Title["+baiduTitle+"]不一样");
+		}
+		
+	}
+	
+	@Test
+	public void test5(){
+		driver.get("http://www.baidu.com/");
+		String baiduTitle=driver.getTitle();
+		driver.get("http://www.baidu.com/");
+		String baiduTitle1=driver.getTitle();
+		System.out.println("baidutitle ["+baiduTitle+"] baiduTitle1 ["+baiduTitle1+"]");
+		try{
+			Assert.assertEquals(baiduTitle1,baiduTitle);
+		}catch(AssertionError error){
+			Assert.fail("百度Title1["+baiduTitle1+"]和百度Title["+baiduTitle+"]不一样");
+		}
+		
+	}
 		
 	@AfterMethod
 	public void after(){
